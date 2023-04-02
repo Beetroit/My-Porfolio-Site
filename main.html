@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>My Portfolio</title>
+	<style>
+		body {
+			background-image: url();
+			background-size: cover;
+			background-repeat: no-repeat;
+			background-position: center center;
+		}
+		
+		.profile-image {
+			border-radius: 50%;
+			height: 150px;
+			width: 150px;
+			object-fit: cover;
+		}
+		
+		.profile-info {
+			margin-top: 50px;
+			text-align: center;
+		}
+		
+		.certificates {
+			margin-top: 50px;
+			text-align: center;
+		}
+		
+		.certificates a {
+			margin: 10px;
+			padding: 10px;
+			border: 1px solid black;
+			border-radius: 5px;
+			text-decoration: none;
+			color: black;
+		}
+	</style>
+</head>
+<body>
+	<div class="profile-image">
+		<img src="profile.jpg" alt="Profile Picture">
+	</div>
+	
+	<div class="profile-info">
+		<h1>John Doe</h1>
+		<h2>Web Developer</h2>
+		<p>Hi, I'm John Doe, a web developer with 20 years of experience. I specialize in HTML, CSS, JavaScript, and React. I've worked with clients ranging from small startups to large corporations.</p>
+	</div>
+	
+	<div class="certificates">
+		<h3>Certificates</h3>
+		<a href="#">Certificate 1</a>
+		<a href="#">Certificate 2</a>
+		<a href="#">Certificate 3</a>
+	</div>
+	
+	<script>
+		fetch('/bg')
+		  .then(response => response.blob()) // Convert the response to a Blob object
+		  .then(blob => {
+			const backgroundUrl = URL.createObjectURL(blob); // Create a URL for the Blob object
+			document.body.style.backgroundImage = backgroundUrl;
+		  });
+		</script>
+		
+
+</body>
+</html>
