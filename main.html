@@ -4,7 +4,7 @@
 	<title>My Portfolio</title>
 	<style>
 		body {
-			background-image: url();
+			background-image: url('pic.jpg');
 			background-size: cover;
 			background-repeat: no-repeat;
 			background-position: center center;
@@ -15,7 +15,12 @@
 			height: 150px;
 			width: 150px;
 			object-fit: cover;
+			margin: 50px auto 0;
+			display: block;
+			border: 5px solid white;
+			box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
 		}
+
 		
 		.profile-info {
 			margin-top: 50px;
@@ -54,16 +59,5 @@
 		<a href="#">Certificate 2</a>
 		<a href="#">Certificate 3</a>
 	</div>
-	
-	<script>
-		fetch('/bg')
-		  .then(response => response.blob()) // Convert the response to a Blob object
-		  .then(blob => {
-			const backgroundUrl = URL.createObjectURL(blob); // Create a URL for the Blob object
-			document.body.style.backgroundImage = backgroundUrl;
-		  });
-		</script>
-		
-
 </body>
 </html>
